@@ -1,9 +1,13 @@
+//////////////////////////////////////////////////////////////////////
 //
-// include header of PAM_Tools
+//                    PI and more
+//              PAM_WiFiTools library
 //
-// created by PI and more, piandmore@j-tools.net
-// More extensive documentation can be found here:
-// https://piandmore.wordpress.com/tag/pam_tools
+// https://piandmore.wordpress.com/tag/pam_wifitools
+//
+//////////////////////////////////////////////////////////////////////
+//
+// Include the PAM_WiFiTools header
 //
 #include <PAM_Tools.h>
 
