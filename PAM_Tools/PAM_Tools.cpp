@@ -6,12 +6,6 @@
 #include <PAM_Tools.h>
 
 //
-// include the PAM_WiFi library and the PAM_Defines library
-//
-#include <PAM_WiFiClient.h>
-#include <PAM_Defines.h>
-
-//
 // include the File System library
 //
 #include <FS.h>
@@ -54,32 +48,3 @@ String getStringKey (String location, String key) {
 //
   return NOKEYFOUND;
 }
-
-//
-// IFTTT, IF This Than That, is a webbased service on ifttt.com that offers an
-// API that allows you to create Maker events. With this call you can supply
-// three optional values along with an event type. The event type is mandatory.
-// There are four instances of this function, depending on whether you call
-// them with no, one, two or three parameters.
-//
-
-#ifdef IFTTT
-void ifttt (String event, String value1, String value2, String value3) {
-  //
-  // The getURL function is used to handle the API call
-  //
-  getURL("maker.ifttt.com","/trigger/"+event+"/with/key/"+IFTTTKEY+"?value1="+value1+"&value2="+value2+"&value3="+value3);
-}
-
-void ifttt (String event, String value1, String value2) {
-  ifttt(event,value1,value2,"");
-}
-
-void ifttt (String event, String value1) {
-  ifttt(event,value1,"","");
-}
-
-void ifttt (String event) {
-  ifttt(event,"","","");
-}
-#endif

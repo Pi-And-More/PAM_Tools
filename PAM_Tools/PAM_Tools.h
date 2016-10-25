@@ -12,11 +12,4 @@
 void toolsSetup ();
 String getStringKey (String, String);
 
-#ifdef IFTTT
-void ifttt (String);
-void ifttt (String, String);
-void ifttt (String, String, String);
-void ifttt (String, String, String, String);
-#endif
-
 #endif
