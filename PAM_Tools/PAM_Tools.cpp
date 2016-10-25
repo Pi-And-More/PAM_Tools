@@ -2,6 +2,8 @@
 // include header of PAM_Tools
 //
 // created by PI and more, piandmore@j-tools.net
+// More extensive documentation can be found here:
+// https://piandmore.wordpress.com/tag/pam_tools
 //
 #include <PAM_Tools.h>
 
@@ -33,7 +35,7 @@ void toolsSetup () {
 //
 String getStringKey (String location, String key) {
   if (!SPIFFSStarted) {
-    toolSetup();
+    toolsSetup();
   }
   if (SPIFFS.exists("/"+location+"/"+key+".txt")) {
     File f = SPIFFS.open("/"+location+"/"+key+".txt","r");

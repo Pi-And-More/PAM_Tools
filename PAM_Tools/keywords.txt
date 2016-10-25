@@ -1,5 +1,4 @@
 toolsSetup	KEYWORD2
-ifttt	KEYWORD2
 getStringKey	KEYWORD2
 
 NOKEYFOUND	LITERAL1
