@@ -8,7 +8,7 @@
 //
 // include the PAM_WiFi library and the PAM_Defines library
 //
-#include <PAM_WiFi.h>
+#include <PAM_WiFiClient.h>
 #include <PAM_Defines.h>
 
 //
@@ -62,6 +62,8 @@ String getStringKey (String location, String key) {
 // There are four instances of this function, depending on whether you call
 // them with no, one, two or three parameters.
 //
+
+#ifdef IFTTT
 void ifttt (String event, String value1, String value2, String value3) {
   //
   // The getURL function is used to handle the API call
@@ -80,3 +82,4 @@ void ifttt (String event, String value1) {
 void ifttt (String event) {
   ifttt(event,"","","");
 }
+#endif
