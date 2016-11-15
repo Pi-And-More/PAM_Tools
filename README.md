@@ -34,4 +34,18 @@ void putStringKey (String location, String key, String value)
 //
 void putIntKey (String location, String key, int value)
 
+//
+// Check whether the String value is there and if so
+// read it. If not, return the default value and
+// write the String value.
+//
+String getPutStringKey (String location, String key, String defaultValue)
+
+//
+// Check whether the int value is there and if so
+// read it. If not, return the default value and
+// write the int value.
+//
+int getPutIntKey (String location, String key, int defaultValue)
+
 You can read about it in more detail on https://piandmore.wordpress.com/tag/pam_tools

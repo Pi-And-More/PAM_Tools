@@ -15,5 +15,7 @@ String getStringKey (String, String);
 int getIntKey (String, String);
 void putStringKey (String, String, String);
 void putIntKey (String, String, int);
+String getPutStringKey (String, String, String);
+int getPutIntKey (String, String, int);
 
 #endif

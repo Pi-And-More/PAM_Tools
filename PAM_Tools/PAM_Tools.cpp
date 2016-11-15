@@ -106,3 +106,33 @@ void putIntKey (String location, String key, int value) {
   File f = SPIFFS.open("/"+location+"/"+key+".txt","w");
   f.print(value);
 }
+
+//
+// Check whether the String value is there and if so
+// read it. If not, return the default value and
+// write the String value.
+//
+String getPutStringKey (String location, String key, String defaultValue) {
+  String temp = getStringKey(location,key);
+  if (temp==NOSTRINGKEYFOUND) {
+    putStringKey(location,key,defaultValue);
+    return defaultValue;
+  } else {
+    return temp;
+  }
+}
+
+//
+// Check whether the int value is there and if so
+// read it. If not, return the default value and
+// write the int value.
+//
+int getPutIntKey (String location, String key, int defaultValue) {
+  int temp = getIntKey(location,key);
+  if (temp==NOINTKEYFOUND) {
+    putIntKey(location,key,defaultValue);
+    return defaultValue;
+  } else {
+    return temp;
+  }
+}
